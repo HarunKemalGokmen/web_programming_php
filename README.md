@@ -16,7 +16,7 @@
 1. Projeyi XAMPP'ın `htdocs` klasörüne klonlayın:
    ```bash
    cd C:/xampp/htdocs
-   git clone https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ.git boteWebsite
+   git clone https://github.com/HarunKemalGokmen/web_programming_php.git boteWebsite
    ```
 2. XAMPP Control Panel üzerinden **Apache** servisini başlatın.
 3. Tarayıcınızdan şu adrese gidin:
