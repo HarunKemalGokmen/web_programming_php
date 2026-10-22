@@ -1,3 +1,16 @@
+<?php
+
+$derskodu = $_POST["ders_kodu"];
+$dersadi = $_POST["ders_adi"];
+$derskredisi = $_POST["ders_kredisi"];
+$dershocasi = $_POST["ders_hocasi"];
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -145,7 +158,19 @@
         data-bs-target="#ders3">
     Detay
 </button></td>
-      </tr>
+</tr>
+
+<?php
+if (isset($_POST["kaydet"])) {
+echo"<tr>";
+echo "<td>" . $derskodu . "</td>";
+echo "<td>" . $dersadi . "</td>";
+echo "<td>" . $derskredisi . "</td>";
+echo "<td>" . $dershocasi . "</td>";
+echo"<tr>";
+}
+?>
+
     </tbody>
   </table>
 </div>
@@ -171,27 +196,27 @@
                     Ders Ekleme Formu
                 </h4>
 
-                <form>
+                <form action="" method="post">
 
                     <div class="mb-3">
                         <label class="form-label">Ders Kodu</label>
                         <input type="text"
                                class="form-control"
-                               placeholder="Ders kodunu giriniz">
+                               placeholder="Ders kodunu giriniz" name="ders_kodu">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Ders Adı</label>
                         <input type="text"
                                class="form-control"
-                               placeholder="Ders adını giriniz">
+                               placeholder="Ders adını giriniz" name="ders_adi">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Kredisi</label>
                         <input type="number"
                                class="form-control"
-                               placeholder="Ders kredisini giriniz">
+                               placeholder="Ders kredisini giriniz" name="ders_kredisi">
                     </div>
 
                     
@@ -200,17 +225,17 @@
                             Dersin Öğretim Üyesi
                         </label>
 
-                        <select class="form-select" id="ogretimUyesi">
+                        <select class="form-select" id="ogretimUyesi" name="ders_hocasi">
 
-                            <option value="" selected disabled>
+                            <option value= selected disabled>
                                 Öğretim üyesi seçiniz
                             </option>
 
-                            <option value="ozgurYilmaz">
+                            <option value="Doç. Dr. ÖZGÜR YILMAZ">
                                 Doç. Dr. ÖZGÜR YILMAZ
                             </option>
 
-                            <option value="irfanSimsek">
+                            <option value="Prof. Dr. İRFAN ŞİMŞEK">
                                 Prof. Dr. İRFAN ŞİMŞEK
                             </option>
 
@@ -222,13 +247,13 @@
                         <label class="form-label">
                             Dersin Açıklaması
                         </label>
-                        <textarea class="form-control"
+                        <textarea class="form-control"name="ders_aciklamasi"
                                   placeholder="Dersin açıklamasını giriniz"
                                   rows="3"></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="button" class="btn btn-success">
+                        <button type="submit" name="kaydet" class="btn btn-success">
                             Kaydet
                         </button>
                     </div>

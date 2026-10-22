@@ -105,29 +105,29 @@
                 <div class="card-body">
                     <h4 class="mb-4 text-center">Öğretim Elemanı Ekleme Formu</h4>
 
-                    <form>
+                    <form action="ogretimElemaniKayit.php" method="post">
                         <div class="mb-3">
                             <label class="form-label">Kurum Sicil No</label>
-                            <input type="text" class="form-control" placeholder="Kurum sicil numarasını giriniz">
+                            <input type="text" class="form-control" placeholder="Kurum sicil numarasını giriniz" name="sicil_no">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Ad</label>
-                            <input type="text" class="form-control" placeholder="Adını giriniz">
+                            <input type="text" class="form-control" placeholder="Adını giriniz" name="hoca_adi">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Soyad</label>
-                            <input type="text" class="form-control" placeholder="Soyadını giriniz">
+                            <input type="text" class="form-control" placeholder="Soyadını giriniz" name="hoca_soyadi">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Email adresini giriniz">
+                            <input type="email" class="form-control" placeholder="Email adresini giriniz" name="hoca_email">
                         </div>
 
                         <div class="text-center">
-                            <button type="button" class="btn btn-success">Kaydet</button>
+                            <button type="submit" class="btn btn-success">Kaydet</button>
                         </div>
                     </form>
 
